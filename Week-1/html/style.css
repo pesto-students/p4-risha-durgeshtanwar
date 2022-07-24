@@ -70,7 +70,30 @@ figure > img {
   width: 200px;
   margin: 25px;
 }
-article {
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.tab {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.tab-gray {
+  background-color: #f0f0f0;
+}
+.tab p {
+  flex: 1;
+}
+button {
+  border: 1px solid blue;
+  text-transform: uppercase;
+  padding: 3px;
+  color: black;
+  background: white;
 }
 footer {
   position: fixed;
