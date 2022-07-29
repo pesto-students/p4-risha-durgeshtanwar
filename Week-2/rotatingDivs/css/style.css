@@ -1,0 +1,48 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh; }
+
+.boxes {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transition: transform 1s linear;
+  transform-style: preserve-3D; }
+  .box__red {
+    background: red;
+    top: 0px;
+    left: 0px;
+    transform-origin: top left; }
+  .box__blue {
+    background: blue;
+    top: 0px;
+    left: 100px;
+    transform-origin: top right; }
+  .box__yellow {
+    background: yellow;
+    top: 100px;
+    left: 0px;
+    transform-origin: bottom left; }
+  .box__green {
+    background: green;
+    top: 100px;
+    left: 100px;
+    transform-origin: bottom right; }
+
+.rotateClockwise {
+  transform: rotate(-90deg); }
+
+.rotateAntiClockwise {
+  transform: rotate(90deg); }

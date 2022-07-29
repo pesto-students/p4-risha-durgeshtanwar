@@ -1,0 +1,60 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.boxes {
+  width: 200px;
+  height: 200px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  // transition:all 1s ease;
+  transition: transform 1s linear;
+
+  transform-style: preserve-3D;
+  &__red {
+    // position:absolute;
+    background: red;
+    top: 0px;
+    left: 0px;
+    transform-origin: top left;
+  }
+
+  &__blue {
+    // position:absolute;
+    background: blue;
+    top: 0px;
+    left: 100px;
+    transform-origin: top right;
+  }
+  &__yellow {
+    background: yellow;
+    top: 100px;
+    left: 0px;
+    transform-origin: bottom left;
+  }
+  &__green {
+    background: green;
+    top: 100px;
+    left: 100px;
+    transform-origin: bottom right;
+  }
+}
+.rotateClockwise {
+  transform: rotate(-90deg);
+}
+.rotateAntiClockwise {
+  transform: rotate(90deg);
+}
