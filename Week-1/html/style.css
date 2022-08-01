@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+#wrapper {
+  display: flex;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 3%;
+  font-weight: bold;
+  padding-top: 20px;
+  background: #f0f0f0;
+  height: 100vh;
+  border-top: solid 2px #454545;
+}
+.nav-link {
+  margin: 30px 0px;
+  color: #000;
+  font-size: 18px;
+}
+main {
+  margin-top: 0px;
+  width: 97%;
+}
+header {
+  display: flex;
+  width: 100%;
+  background: #454545;
+  height: 16rem;
+  color: white;
+  margin-top: 0px;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.song-title {
+  font-size: 20px;
+}
+.song-desc {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.play-icons {
+  display: flex;
+  margin-top: auto;
+  align-items: stretch;
+}
+.play-text {
+  margin-left: 10px;
+  font-size: 12px;
+}
+.icons {
+  margin-left: 10px;
+  font-size: 16px;
+}
+figure > img {
+  width: 200px;
+  margin: 25px;
+}
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.tab {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.tab-gray {
+  background-color: #f0f0f0;
+}
+.tab p {
+  flex: 1;
+}
+button {
+  border: 1px solid blue;
+  text-transform: uppercase;
+  padding: 3px;
+  color: black;
+  background: white;
+}
+footer {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  bottom: 0px;
+  height: 6rem;
+  background: #42689b;
+  color: #fff;
+  justify-content: space-between;
+}
+.footer-desc {
+  display: flex;
+}
+.footer-desc img {
+  margin: 10px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+.song-name {
+  margin-bottom: 13px;
+}
+.player-controls {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin: 20px;
+}
+.footer-player {
+  margin-right: 200px;
+  font-size: 24px;
+}
