@@ -1,0 +1,19 @@
+.btn {
+  &:link,
+  &:visited {
+    width: 25rem;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    color: $colorWhite;
+    border: 1px solid $primaryColor;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    align-self: center;
+    transition: all 2s;
+    animation: moveInRight 2s;
+  }
+  &:hover {
+    color: pink;
+  }
+}
