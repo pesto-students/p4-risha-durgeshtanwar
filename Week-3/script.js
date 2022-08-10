@@ -33,9 +33,31 @@ const memoize = () => {
 
 const newAdd = memoize();
 // a simple memoized function to add something
-console.log(newAdd(12, 12, 33, 45, 23, 55, 23, 55));
-console.log(newAdd(10, 12));
-console.log(newAdd(12, 12, 33, 45, 23, 55));
-console.log(newAdd(12, 12, 33, 45, 23, 55, 23, 55));
-console.log(newAdd(100));
-console.log(newAdd(10, 12));
+// console.time();
+// console.log(newAdd(12, 12, 33, 45, 23, 55, 23, 55));
+// console.timeEnd();
+// console.log(newAdd(10, 12));
+// console.log(newAdd(12, 12, 33, 45, 23, 55));
+// console.log(newAdd(12, 12, 33, 45, 23, 55, 23, 55));
+// console.log(newAdd(100));
+// console.log(newAdd(10, 12));
+
+//! assignment number 2
+function createIncrement() {
+  let count = 0;
+  function increment() {
+    count++;
+  }
+  let message = `Count is ${count}`;
+  function log() {
+    console.log(message);
+  }
+  return [increment, log];
+}
+const [increment, log] = createIncrement();
+increment();
+increment();
+increment();
+log();
+
+//* we are getting the output 'count is 0' because increment function is incrementing the value but the message variable is outside of the increment method. so it takes that value to 0
