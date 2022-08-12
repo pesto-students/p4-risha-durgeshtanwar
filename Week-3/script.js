@@ -61,3 +61,54 @@ increment();
 log();
 
 //* we are getting the output 'count is 0' because increment function is incrementing the value but the message variable is outside of the increment method. so it takes that value to 0
+
+// Assignment for call, apply and bind method.
+//
+const lufthansa = {
+  airline: "Lufthansa",
+  iatacode: "LH",
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iatacode}${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+};
+
+lufthansa.book(235, "Jonas");
+lufthansa.book(634, `Rishi`);
+console.log(lufthansa);
+
+const book = lufthansa.book;
+
+const eurowings = {
+  airline: "Eurowings",
+  iatacode: "EW",
+  bookings: [],
+};
+
+console.log(book.call(eurowings, 23, "Durgesh"));
+book.call(lufthansa, 239, "marry");
+
+console.log(book.apply(lufthansa, [32, "Durgesh"]));
+// bind method
+// bind returns new function
+
+const bookEW = book.bind(eurowings);
+bookEW(23, "steven");
+
+// this new function will work with eurowings only
+
+// we can fix one of the parameter in the bind method
+const bookEW23 = book.bind(eurowings, 23);
+bookEW23("shyamlal");
+
+// partial application
+
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+const addVAT = addTax.bind(null, 0.23);
+
+// only difference between
