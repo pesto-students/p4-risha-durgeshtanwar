@@ -1,0 +1,29 @@
+nav {
+  background-color: $secondaryColor;
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  font-family: $primaryFont;
+  font-size: 1.6rem;
+  padding-left: 30px;
+  & ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    & li {
+      margin-left: 20px;
+    }
+    & a {
+      text-decoration: none;
+      color: $primaryColor;
+    }
+  }
+  & .logo {
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $primaryColor;
+  }
+}

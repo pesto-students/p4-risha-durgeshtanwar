@@ -1,0 +1,72 @@
+.hero-section {
+  display: flex;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($primaryColor, 0.9),
+      rgba($secondaryColor, 0.9)
+    ),
+    url("../images/photo-bg.jpg");
+  height: 95vh;
+  width: 100%;
+  background-size: cover;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.photo {
+  width: 50rem;
+  max-height: 100%;
+  padding: 11.5rem 0 30rem 0;
+  animation: moveInLeft 2s;
+}
+.hero-photo {
+  width: 50rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+.about-us {
+  display: flex;
+  justify-content: start;
+  //align-items: center;
+  padding: 1rem 5rem;
+  height: 50rem;
+  gap: 3rem;
+
+  &__text {
+    font-family: $primaryFont;
+    font-size: 1.6rem;
+    color: $secondaryColor;
+    padding: 2rem;
+    flex-basis: 50%;
+    flex-grow: 0;
+    & p {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &__composition {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &--photo-1 {
+      width: 35rem;
+      flex-basis: 50%;
+      flex-grow: 0;
+      position: absolute;
+      top: 3rem;
+      left: 3rem;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    }
+    &--photo-2 {
+      width: 35rem;
+      flex-basis: 50%;
+      flex-grow: 0;
+      position: absolute;
+      top: 5rem;
+      left: 30rem;
+    }
+  }
+}
