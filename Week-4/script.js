@@ -67,7 +67,7 @@ Person.prototype.teach = function () {
 };
 teacher.teach();
 
-// assignment fibonaaci using itereator
+// assignment fibonaaci using itereator`
 
 function fibo(num) {
   this.num = num;
