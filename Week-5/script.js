@@ -83,13 +83,27 @@ function displayVerses(fn) {
 //chapter.next();
 
 // with async and await, the
-
+const content = document.getElementById("content");
 async function bhagwan() {
   const arjun = await fetch(
     "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/?limit=18",
     options
   );
   const parth = await arjun.json();
-  console.log(parth);
+
+  parth.forEach((shlok, i) => {
+    const html = `<article>
+    <h2 id="chapter-title">${i + 1} ${shlok.name}</h2>
+    <p class="summary">${shlok.chapter_summary_hindi}</p>
+    <p class="summary">${shlok.chapter_summary}</p>
+    <a href="#${i}">readmore</a>
+  </article>`;
+    content.insertAdjacentHTML("beforebegin", html);
+  });
+  for (s of parth) {
+    // console.log(s);
+    const ss = await geeta(s.chapter_number);
+    console.log(ss.bhagwatResult);
+  }
 }
 bhagwan();
