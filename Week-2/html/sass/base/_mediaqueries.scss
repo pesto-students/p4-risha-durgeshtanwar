@@ -1,0 +1,14 @@
+@media (max-width: 800px) {
+  .photo {
+    display: none;
+  }
+  .heading__main {
+    // font-size: 2rem;
+    &h1 {
+      font-size: 2rem;
+    }
+  }
+  .about-section {
+    flex-wrap: wrap;
+  }
+}

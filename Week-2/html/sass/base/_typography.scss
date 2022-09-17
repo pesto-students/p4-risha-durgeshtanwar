@@ -1,0 +1,38 @@
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: $primaryFont;
+  align-self: center;
+  // color: $secondaryColor;
+  background-image: linear-gradient(to right, $colorWhite, $primaryColor);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  font-size: 3rem;
+
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: moveInRight 2s;
+}
+.heading__main {
+  font-family: $primaryFont;
+  font-size: 3rem;
+  font-weight: bold;
+  align-self: center;
+  background-image: linear-gradient(
+    to bottom right,
+    $primaryColor,
+    $secondaryColor
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  transition: all 0.8s;
+  &:hover {
+    transform: skewX(15deg) skewY(2deg) scale(1.1);
+  }
+}
