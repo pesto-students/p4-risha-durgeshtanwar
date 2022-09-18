@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 5 Assignments</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: "Gill sans";
+      }
+      .container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 80%;
+        background: #fff6a1;
+      }
+      header {
+        display: flex;
+        height: 40px;
+        background: orangered;
+        width: 100%;
+        align-items: center;
+        color: white;
+        font-family: "Gill sans";
+        text-transform: uppercase;
+        padding-left: 12px;
+        justify-content: space-between;
+      }
+      .navigation {
+        display: flex;
+        padding: 12px;
+      }
+      .navigation a {
+        color: white;
+        text-decoration: none;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+      }
+      .summary {
+        padding: 10px;
+      }
+      #chapter-title {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <header>
+        <div class="title">Bhagwat Geeta</div>
+        <nav class="navigation"><a href="#" id="chapters">Chapters</a></nav>
+      </header>
+      <div class="content" id="content"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
