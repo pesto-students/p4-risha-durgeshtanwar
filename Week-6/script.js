@@ -108,7 +108,6 @@ function sorting(problem) {
 
 let inputs = [7, 1, 5, 3, 6, 4];
 function bestTimeToBuyAndSell(inputs) {
-  let resultArray = [];
   let buyingDay = inputs.indexOf(Math.min(...inputs)) + 1;
   let buyingDayIndex = buyingDay - 1;
   let buyingDayValue = inputs[buyingDayIndex];
@@ -123,5 +122,50 @@ function bestTimeToBuyAndSell(inputs) {
     return "0 profit";
   }
 }
-console.log(bestTimeToBuyAndSell(inputs));
-console.log(bestTimeToBuyAndSell([7, 6, 4, 3, 1]));
+//console.log(bestTimeToBuyAndSell(inputs));
+// console.log(bestTimeToBuyAndSell([7, 6, 4, 3, 1]));
+
+// assignment 6.5
+const difference = (array, targetDifference) => {
+  for (let i = 0; i < array.length; i++) {
+    for (j = 0; j < array.length; j++) {
+      if (Math.abs(array[i] - array[j]) === targetDifference) {
+        return 1;
+      }
+    }
+  }
+  return 0;
+};
+console.log(difference([5, 10, 3, 2, 50, 80], 10));
+
+// assignment 6.6
+// 3SUM problem
+
+var threeSum = function (nums) {
+  var solutions = [];
+  var target = 0;
+  nums.sort(function (a, b) {
+    return a - b;
+  });
+  for (var i = 0; i < nums.length - 2; i++) {
+    if (i === 0 || (i > 0 && nums[i] !== nums[i - 1])) {
+      var lo = i + 1;
+      var hi = nums.length - 1;
+      var sum = -nums[i];
+      while (lo < hi) {
+        if (nums[lo] + nums[hi] === sum) {
+          solutions.push([nums[i], nums[lo], nums[hi]]);
+          while (lo < hi && nums[lo] === nums[lo + 1]) lo++;
+          while (lo < hi && nums[hi] == nums[hi - 1]) hi--;
+          lo++;
+          hi--;
+        } else if (nums[lo] + nums[hi] > sum) {
+          hi--;
+        } else {
+          lo++;
+        }
+      }
+    }
+  }
+  return solutions;
+};
